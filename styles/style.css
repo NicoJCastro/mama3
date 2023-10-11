@@ -1,0 +1,508 @@
+:root {
+    --color-body: #413D44;
+
+
+}
+
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;  /*PARA QUE 1REM SEA IGUAL A 10 PX*/
+  }
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+body {
+    background-color: var(--color-body);
+}
+
+
+
+.contenedor {
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;  /*centra el contenido horizontalmente */
+    /* podemos usar with: min (90%, 120rem); para suplantar max-with y width */
+}
+
+a{
+    text-decoration: none;
+    
+}
+
+img { max-width: 100%; }
+
+
+/* Header */
+
+
+
+.barra {
+    padding-top: 4rem;
+
+}
+
+
+
+@media (min-width: 768px) {
+
+     .barra {
+        display: flex;
+        justify-content: space-between;  /* alineamos horizonalmente  */
+        align-items: center; /*alineamos verticalmente*/
+        border-bottom: 2px solid rgba(244, 247, 244, 0.5);
+            }
+
+    .logo {
+        padding: 0;
+        margin: 0;
+        width: 32%;
+    }
+
+    .navegacion {
+        display: flex;
+        gap: 2rem;
+    }
+    }
+
+
+
+.navegacion__enlace {
+    display: block;
+    text-align: center;
+    font-size: 1.8rem;
+    color: #fff;
+    padding: 14px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+.navegacion__enlace:hover {
+    border-radius: 10%;
+    background-color: rgba(20, 20, 19, 0.2) ;
+}
+
+/* MENU HAMBUERGUESA */
+
+.btn-menu{
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: background 300ms;
+    display: none;
+}
+
+
+
+.btn-menu:hover{
+    background: #f5f5f5;
+}
+
+
+
+/*MENU HAMBUERGUESA MEDIA QUERY*/
+@media screen and (max-width: 760px) {
+    .logo-container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start; /* Alinea los elementos a la esquina superior izquierda */
+    }
+
+    .logo {
+        width: 45%;
+        order: 2; /* Cambia el orden para que la imagen aparezca después del icono */
+    }
+
+    .btn-menu {
+        display: inline-flex;
+        margin-left: 1px; /* Ajusta el espacio entre el icono y la imagen */
+        order: 1; /* Cambia el orden para que el icono aparezca primero */
+        color: #fff;
+    }
+
+
+    .btn-menu:hover{
+        background-color: rgba(20, 20, 19, 0.2) ;
+       
+    }
+    .navegacion {
+        height: 100%;
+        background: #413D45;
+        position: fixed;
+        top: 0;
+        right: -310px;
+        padding: 0 40px;
+        transition: all 300ms;
+        flex-direction: column;
+        z-index: 100000;
+       
+    }
+
+    .move-nav {
+        right: 0;
+    }
+
+    .navegacion__enlace {
+        margin: 20px 0px;
+    }
+
+
+
+    /*QUERY FONDO Y CONTACTAME*/
+    .fondo{
+        max-width: 90%;
+        margin-left: 0;
+        margin-bottom: 0;
+
+    }
+    .texto-fondo p{
+        text-align: left;
+        font-size: 20px;
+        margin-left: -20%;
+      
+    }
+
+    
+    .imagen-fondo{
+        display: none;
+    }
+    .contacto{
+        margin-left: 0%;
+    }
+
+
+
+
+    /*NOSOTROS QUERY*/
+    .contenedor-main {
+        margin: 0 auto;
+        max-width: 90%; /* Ajusta el ancho máximo según tus necesidades */
+    }
+    
+    .nosotros {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centra los elementos horizontalmente */
+        text-align: center; /* Centra el texto horizontalmente */
+    }
+    
+    .nosotros h1 {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+    
+    .nosotros img {
+        max-width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+        position: relative;
+        margin: 0 auto;
+    }
+    
+    .nosotros p {
+        font-size: 12px;
+        max-width: 90%; /* Ajusta el ancho máximo del párrafo */
+        margin: 10px 0; /* Espacio en la parte superior e inferior del párrafo */
+    }
+
+    
+/*PUERICULTORES QUERY*/
+
+.puericultores{
+    align-items: center;
+    text-align: center;
+    max-width: 100%;
+}
+.puericultores h1 {
+    font-size: 20px;
+}
+
+.puericultores p {
+    font-size: 15px;
+    max-width: 90%;
+    margin-left:5% ;
+    line-height: 1.7rem;
+}
+.pueri-tarjetas .tarjeta h2{
+    font-size: 15px;
+    margin-bottom: 3px;
+}
+.tarjeta p {
+    font-size: 12px;
+}
+
+ .texto-card {
+    
+    font-size: 10px;
+}
+}
+
+/*PARTE CONTACTO*/
+
+
+
+.fondo{
+   
+    display: flex;
+    width: 95%;
+    margin: 50px;
+    padding: 0;
+    margin-top: 0;
+    max-width: 100%;
+    
+}
+
+.texto-fondo{
+    font-family: 'Montserrat', sans-serif;
+    color:#f5f5f5 ;
+    max-width: 570px;
+    font-size: 35px;
+    text-align: left;
+    padding: 2rem;
+    position: relative;
+}
+
+.imagen-fondo{
+  margin-left: 15%;
+  position: absolute;
+  z-index: -1000;
+
+}
+
+.contacto{
+    font-family: 'Montserrat', sans-serif;;
+    padding: 10px;
+    margin-top: 0;
+    margin-left:5x;
+    font-size: 20px;
+    
+    border: none;
+    color: #413D45;
+    background-color: #EBCFC8;
+    border-radius: 30px;
+    box-shadow: 1px 1px 30px -5px #20202049;
+    cursor: pointer;
+    transition: box-shadow 500ms;
+}
+
+
+.contacto:hover{
+    background-color: #C4ADA7;
+    box-shadow: 1px 1px 10px -5px #737878;
+}
+
+/*FIN DE CONTACTO*/
+
+
+/*SOBRE NOSOTROS*/
+
+.nosotros{
+    align-items: center;
+    margin-top: 20px;
+    display: inline;
+    margin-left: 10px;
+    
+}
+
+
+.titulo-nos{
+    color: #C3846B;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    max-width: 524px;
+    margin-left: 10px;
+    margin-top: 0;
+}
+
+
+.texto-nos{
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    max-width: 730px;
+    font-size: 18px;
+    text-align: left;
+    margin-bottom:10px ;
+    margin-left: 10px;
+    
+}
+
+
+.nosotros-img{    
+    position: absolute;
+    margin-left: 55%;
+    margin-top: -10%;   
+    
+}
+
+
+/*QUE HACEN LOS PUERICULTORES*/
+
+
+.puericultores{
+    align-items: center;
+    text-align: center;
+    max-width: 100%;
+    margin-top: 14%;
+}
+
+
+
+.titulo-puericultores{
+    color: #C3846B;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 35px;    
+    margin-left: 10px;
+    justify-content: center;
+    text-align: center;
+   position: relative;
+}
+
+
+.texto-puericultores{
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    max-width: 850;
+    margin-bottom:10px ;
+    margin-left: 10px;
+    line-height: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+}
+
+
+
+.pueri-tarjetas {
+    display: flex;
+    flex-wrap: wrap; /* Para que las tarjetas se ajusten en filas */
+    max-width: 90%;
+    justify-content: space-between;
+    margin: 0 auto;
+    gap: 10px; /* Espacio entre las tarjetas */
+    margin-top: 80px;
+}
+
+ .tarjeta {
+    width: 300px; /* Ancho de las tarjetas */
+    height: 200px;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #F8F6EB;
+    text-align: center; /* Para centrar el contenido */
+}
+
+/* Estilos para los títulos dentro de las tarjetas */
+.pueri-tarjetas .tarjeta h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #C3846B;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Estilos para los párrafos dentro de las tarjetas */
+.pueri-tarjetas .tarjeta p {
+    font-size: 16px;
+    line-height: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/*EFECTOS DE TARJETA*/
+.tarjeta:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px #AE689D;
+}
+
+
+
+
+/*PRODUCTOS*/
+
+.productos{
+    align-items: center;
+    text-align: center;
+    max-width: 100%;
+}
+
+
+.titulo-productos{
+    color: #C3846B;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 35px;
+    
+    margin-left: 10px;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+
+.texto-productos{
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    max-width: 90%;
+    margin-bottom:10px ;
+    margin-left: 10px;
+    line-height: 30px;
+    
+}
+
+
+
+
+/*SLIDER PRODUCTO*/
+.slider-wrapper{
+    position: relative;
+    max-width: 50%;
+    margin: 0 auto;
+    height: 50%;
+    cursor: help;
+
+}
+
+
+.slider{
+    display: flex;
+    aspect-ratio: 2/2;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 .25rem .5rem #21212126;
+    border-radius: .5rem;
+}
+
+.slider img{
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+}
+
+.slider-nav{
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+
+.slider-nav a{
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: .75;
+    transition: opacity ease 250ms;
+}
