@@ -124,6 +124,7 @@ img { max-width: 100%; }
         margin-left: 1px; /* Ajusta el espacio entre el icono y la imagen */
         order: 1; /* Cambia el orden para que el icono aparezca primero */
         color: #fff;
+        
     }
 
 
@@ -174,6 +175,7 @@ img { max-width: 100%; }
     }
     .contacto{
         margin-left: 0%;
+        
     }
 
 
@@ -181,8 +183,9 @@ img { max-width: 100%; }
 
     /*NOSOTROS QUERY*/
     .contenedor-main {
-        margin: 0 auto;
-        max-width: 90%; /* Ajusta el ancho máximo según tus necesidades */
+        
+        align-items: center;
+        max-width: 100%; /* Ajusta el ancho máximo según tus necesidades */
     }
     
     .nosotros {
@@ -201,12 +204,13 @@ img { max-width: 100%; }
         max-width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
         position: relative;
         margin: 0 auto;
+        z-index: -10000;
     }
     
     .nosotros p {
         font-size: 12px;
-        max-width: 90%; /* Ajusta el ancho máximo del párrafo */
-        margin: 10px 0; /* Espacio en la parte superior e inferior del párrafo */
+        max-width: 100%; /* Ajusta el ancho máximo del párrafo */
+       text-align: center; /* Espacio en la parte superior e inferior del párrafo */
     }
 
     
@@ -214,18 +218,23 @@ img { max-width: 100%; }
 
 .puericultores{
     align-items: center;
-    text-align: center;
     max-width: 100%;
 }
 .puericultores h1 {
-    font-size: 20px;
+    font-size: 18px;
+    margin-top: 10px;
 }
 
 .puericultores p {
-    font-size: 15px;
-    max-width: 90%;
-    margin-left:5% ;
-    line-height: 1.7rem;
+    font-size: 12px;
+    max-width: 100%; /* Ajusta el ancho máximo del párrafo */
+    text-align: center;
+    line-height: 1.5;
+}
+.pueri-tarjetas{
+    align-items: center;
+    text-align: center;
+    flex-direction: column; 
 }
 .pueri-tarjetas .tarjeta h2{
     font-size: 15px;
@@ -239,10 +248,12 @@ img { max-width: 100%; }
     
     font-size: 10px;
 }
+
+/*QUERY SLIDER*/
+
 }
 
 /*PARTE CONTACTO*/
-
 
 
 .fondo{
@@ -259,15 +270,16 @@ img { max-width: 100%; }
 .texto-fondo{
     font-family: 'Montserrat', sans-serif;
     color:#f5f5f5 ;
-    max-width: 570px;
+    max-width: 700px;
     font-size: 35px;
     text-align: left;
-    padding: 2rem;
+    padding: 3rem;
     position: relative;
+   
 }
 
 .imagen-fondo{
-  margin-left: 15%;
+  margin-left: 5%;
   position: absolute;
   z-index: -1000;
 
@@ -275,9 +287,9 @@ img { max-width: 100%; }
 
 .contacto{
     font-family: 'Montserrat', sans-serif;;
-    padding: 10px;
+    padding: 18px;
     margin-top: 0;
-    margin-left:5x;
+    margin-left:5px;
     font-size: 20px;
     
     border: none;
@@ -287,6 +299,8 @@ img { max-width: 100%; }
     box-shadow: 1px 1px 30px -5px #20202049;
     cursor: pointer;
     transition: box-shadow 500ms;
+    margin-bottom: 335px;
+    
 }
 
 
@@ -296,8 +310,33 @@ img { max-width: 100%; }
 }
 
 /*FIN DE CONTACTO*/
+/*COMPROMISO*/
+.compromiso{
+    margin-top: 200px;
+    background-image: url('../img/fondo imagenes.png');
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    justify-content: space-between;
+   
+}
+.compromiso-imagenes {
+    margin-left: 10%;
+    margin-bottom: 5%;
+}
 
-
+.titulo-compromiso{
+    text-align: center;
+    font-size: 25px;
+    padding: 50px;
+}
+.comp-img{
+   max-width: 100%;
+   margin-right: 30px;
+   left: 0;
+   right: 0;
+}
 /*SOBRE NOSOTROS*/
 
 .nosotros{
@@ -305,6 +344,7 @@ img { max-width: 100%; }
     margin-top: 20px;
     display: inline;
     margin-left: 10px;
+    
     
 }
 
@@ -334,7 +374,7 @@ img { max-width: 100%; }
 .nosotros-img{    
     position: absolute;
     margin-left: 55%;
-    margin-top: -10%;   
+    margin-top: -5%;   
     
 }
 
@@ -385,6 +425,7 @@ img { max-width: 100%; }
     margin: 0 auto;
     gap: 10px; /* Espacio entre las tarjetas */
     margin-top: 80px;
+    
 }
 
  .tarjeta {
@@ -505,4 +546,131 @@ img { max-width: 100%; }
     background-color: #fff;
     opacity: .75;
     transition: opacity ease 250ms;
+}
+
+
+
+/*CLIENTES SATISFECHOS*/
+
+
+.clientes{
+    align-items: center;     
+    background-image: url(../img/fondo\ cliente\ felices.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.titulo-clientes{
+    text-align: center;
+    padding: 100px;
+    font-size: 25px;
+}
+
+
+.clientes-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 90px;
+}
+
+.tarjeta-cliente{
+    width: 280px; /* Ancho de las tarjetas */
+    height: 350px;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #ccc;   
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #F8F6EB;
+    text-align: center; /* Para centrar el contenido */
+}
+
+/* FORMULARIO */
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #AE689D;
+}
+
+.image {
+    flex: 1;
+    padding: 20px;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.form {
+    flex: 2;
+    padding: 20px;
+}
+
+form {
+    border: 1px solid #ccc;
+    padding: 20px;
+    background: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 2%;
+    background-image: url(../img/fondo\ imagenes.png);
+}
+
+h2 {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="telefono"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* FOOTER */
+
+.footer {
+    text-align: center;
+}
+
+.social-media,
+.contact-info {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.social-media svg,
+.contact-info svg {
+    width: 44px;
+    height: 44px;
+}
+
+p {
+    margin-top: 20px;
 }
