@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+
 :root {
     --color-body: #413D44;
 
@@ -178,9 +180,10 @@ img { max-width: 100%; }
         
     }
 
-
-
-
+/*QUERY COMPROMISO*/
+.compromiso .compromiso-imagenes {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en dispositivos móviles */
+}
     /*NOSOTROS QUERY*/
     .contenedor-main {
         
@@ -269,6 +272,18 @@ img { max-width: 100%; }
     flex-direction: column; 
 }
 
+
+/*QUERY DE FORMULARIO*/
+.form {
+    flex-direction: column;
+}
+
+.form,
+.image {
+    width: 100%;
+}
+
+
 }
 
 /*PARTE CONTACTO*/
@@ -340,21 +355,22 @@ img { max-width: 100%; }
    
 }
 .compromiso-imagenes {
-   
-    margin-bottom: 5%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px; /* Espacio entre las imágenes */
 }
 
+.comp-img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
 .titulo-compromiso{
     text-align: center;
     font-size: 25px;
     padding: 50px;
 }
-.comp-img{
-   max-width: 100%;
-   margin-right: 30px;
-   left: 0;
-   right: 0;
-}
+
 /*SOBRE NOSOTROS*/
 
 .nosotros{
@@ -557,6 +573,7 @@ img { max-width: 100%; }
   }
   
   .card h2 {
+    color: black;
     font-size: 18px;
     margin: 0;
   }
@@ -600,7 +617,6 @@ img { max-width: 100%; }
 
 
 }
-
 
 
 
@@ -667,41 +683,46 @@ img { max-width: 100%; }
 }
 
 form {
-    border: 1px solid #ccc;
+    
     padding: 20px;
     background: #f9f9f9;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     border-radius: 2%;
-    background-image: url(../img/fondo\ imagenes.png);
+    background-image: url(../img/fondo_violeta.png);
+    
+    
 }
 
 h2 {
     text-align: center;
+    color: #eee;
 }
 
-label {
-    display: block;
-    margin-top: 10px;
-}
+
 
 input[type="text"],
 input[type="email"],
 input[type="telefono"],
 textarea {
     width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 7px;
+    margin-top: 15px;
+    border: 1px solid #ECE5D4;
+    border-radius: 24px;
+   resize: none;
+   background-color: #ECE5D4;
+   
 }
 
 input[type="submit"] {
-    background-color: #AE689D;
-    color: #fff;
+    background-color: #ECE5D4;
+    color: #000;
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    margin-top: 10px;
+    margin-left: 7px;
 }
 
 input[type="submit"]:hover {
@@ -711,22 +732,107 @@ input[type="submit"]:hover {
 
 /* FOOTER */
 
-.footer {
+.pie-pagina{
+    width: 100%;
+    background-color:#0a141d ;
+}
+
+
+.pie-pagina .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+.pie-pagina .grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie-pagina .grupo-1 .box figure img{
+    width: 250px;
+}
+
+.pie-pagina .grupo-1 .box h2{
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+.pie-pagina .grupo-1 .box p{
+    color: #efefef;
+    margin-bottom: 10px;
+    font-size: 12px;
+    
+}
+.pie-pagina .grupo-1 .red-social{
+  
+   text-align: center;
+}
+
+.pie-pagina .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #eee;
+    margin-right: 10px;
+    background-color: #0d2033;
     text-align: center;
+    transition: all 300ms ease;
 }
 
-.social-media,
-.contact-info {
-    display: block;
-    margin-bottom: 20px;
+.pie-pagina .grupo-1 .red-social a:hover{
+    color: #7c5a8c;
 }
 
-.social-media svg,
-.contact-info svg {
-    width: 44px;
-    height: 44px;
+.pie-pagina .grupo-2{
+    background-color: #0a1a2a;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
 }
 
-p {
-    margin-top: 20px;
+
+.pie-pagina .grupo-2 small{
+    font-size: 15px;
+}
+
+
+/*MEDIA QUERY DE FOOTER*/
+
+
+@media screen and (max-width:800px){
+    
+.pie-pagina .grupo-1{
+    width: 90%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+    padding: 35px 0px;
+   justify-content: center;
+
+}
+.pie-pagina .grupo-1 .box figure img{
+    width: 250px;
+    margin-right: 75px;
+}
+
+
+.pie-pagina .grupo-1 .box p{
+    color: #efefef;
+    margin-bottom: 10px;
+    font-size: 12px;
+    margin-left: 20px;
+    max-width: 80%;
+    
+}
+.pie-pagina .grupo-1 .red-social{
+    text-align: center;
+ }
 }
