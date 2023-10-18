@@ -34,3 +34,15 @@ Window.onscroll = function(){
         }
     }
     )
+
+
+    // WA
+
+// JavaScript
+document.querySelector('.whatsapp-button').addEventListener('click', function() {
+    // Abre el enlace en una nueva ventana o pestaña
+    window.open(this.querySelector('a').getAttribute('href'), '_blank');
+
+    // Puedes ocultar el botón si lo deseas
+    // this.style.display = 'none';
+});
