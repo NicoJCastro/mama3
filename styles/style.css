@@ -86,8 +86,6 @@ img { max-width: 100%; }
 }
 
 /* Estilos para el botón flotante de WhatsApp */
-
-/* Estilos para el botón flotante de WhatsApp */
 .whatsapp-button {
     position: fixed;
     bottom: 20px;
@@ -360,7 +358,7 @@ img { max-width: 100%; }
 }
 
 .imagen-fondo{
-  margin-left: 5%;
+  margin-left: 15%;
   position: absolute;
   z-index: -1000;
 
